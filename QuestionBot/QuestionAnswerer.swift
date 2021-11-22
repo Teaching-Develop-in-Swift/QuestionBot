@@ -3,6 +3,10 @@ struct MyQuestionAnswerer {
         
         let lowerQuestion = question.lowercased()
         
+        if !lowerQuestion.hasSuffix("?") {
+            return "Is that a question?"
+        }
+        
         if lowerQuestion == "where are the cookies?" {
             return "In the cookie jar!"
         } else if lowerQuestion.hasPrefix("where") {
